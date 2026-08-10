@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>InvenTrack - Eliminar Producto</title>
+
+    <link rel="stylesheet" href="../styles/estilo.css">
+    <link rel="stylesheet" href="../styles/eliminar-producto.css">
+
+</head>
+
+
+<body>
+
+    <div class="contenedor">
+
+
+        <!-- =================================
+             BARRA LATERAL
+        ================================== -->
+
+        <aside class="sidebar">
+
+
+            <!-- PERFIL -->
+
+            <div class="perfil">
+
+                <div class="foto-perfil">
+
+                    <img
+                        src="https://via.placeholder.com/120"
+                        alt="Foto de usuario"
+                    >
+
+                </div>
+
+                <h3>User1234</h3>
+
+            </div>
+
+
+            <!-- MENÚ -->
+
+            <nav class="menu">
+
+                <a href="../pages/productos.html">
+                    PRODUCTOS
+                </a>
+
+                <a href="../pages/salidas.html">
+                    SALIDAS
+                </a>
+
+                <a href="#">
+                    REPORTES
+                </a>
+
+                <a href="../pages/configuracion.html" class="activo">
+                    CONFIGURACION
+                </a>
+
+            </nav>
+
+
+            <!-- CERRAR SESIÓN -->
+            <a href="#" class="cerrar-sesion" id="btnCerrarSesion">
+                CERRAR SESION
+            </a>
+
+
+        </aside>
+
+
+
+        <!-- =================================
+             CONTENIDO PRINCIPAL
+        ================================== -->
+
+        <main class="contenido-eliminar">
+
+
+            <h1>CONFIGURACIÓN</h1>
+
+
+            <!-- =================================
+                 TARJETA ELIMINAR PRODUCTO
+            ================================== -->
+
+            <section class="tarjeta-eliminar">
+
+
+                <h2>Eliminar un producto</h2>
+
+
+                <!-- ADVERTENCIA -->
+
+                <div class="advertencia">
+
+                    <span>
+                        Al eliminar un producto se borrara toda existencia
+                    </span>
+
+                    <div class="icono-advertencia">
+                        !
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCTO -->
+
+                <div class="producto-eliminar">
+
+                    <label for="producto">
+                        Nombre del producto a eliminar
+                    </label>
+
+                    <select id="producto">
+
+                     <option value="">
+                         Seleccionar producto
+                     </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- BOTÓN -->
+
+                <button
+                    type="button"
+                    class="btn-eliminar"
+                    id="btnEliminar"
+                >
+                    Eliminar
+                </button>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+    <script src="../js/eliminar-producto.js"></script>
+
+</body>
+
+</html>

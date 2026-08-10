@@ -1,0 +1,351 @@
+/* ======================================
+   CONTENIDO DE SALIDAS
+====================================== */
+
+.contenido-salidas {
+
+    flex: 1;
+
+    padding: 5px 35px;
+
+}
+
+
+/* ======================================
+   TÍTULO
+====================================== */
+
+.contenido-salidas h1 {
+
+    text-align: center;
+
+    font-size: 52px;
+
+    margin: 5px 0 70px;
+
+    color: #000000;
+
+}
+
+
+/* ======================================
+   TARJETA NUEVA SALIDA
+====================================== */
+
+.tarjeta-salida {
+
+    width: 850px;
+
+    min-height: 425px;
+
+    margin: 0 auto;
+
+    background-color: #ffffff;
+
+    border-radius: 20px;
+
+    padding: 30px 35px;
+
+    box-shadow: 0 12px 15px rgba(0, 0, 0, 0.25);
+
+}
+
+
+/* ======================================
+   TÍTULO DEL FORMULARIO
+====================================== */
+
+.tarjeta-salida h2 {
+
+    margin: 0 0 28px 0;
+
+    color: #486a82;
+
+    font-size: 19px;
+
+}
+
+
+/* ======================================
+   CAMPOS PRINCIPALES
+====================================== */
+
+.campos-principales {
+
+    display: flex;
+
+    gap: 30px;
+
+    align-items: flex-start;
+
+}
+
+
+/* ======================================
+   CAMPO
+====================================== */
+
+.campo {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+/* ======================================
+   ETIQUETAS
+====================================== */
+
+.campo label {
+
+    color: #486a82;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin: 0 0 8px 5px;
+
+}
+
+
+/* ======================================
+   INPUTS
+====================================== */
+
+.campo input {
+
+    width: 168px;
+
+    height: 43px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: #e3e3e3;
+
+    padding: 0 12px;
+
+    outline: none;
+
+    font-size: 14px;
+
+}
+
+
+/* EFECTO AL SELECCIONAR */
+
+.campo input:focus {
+
+    outline: 2px solid #285876;
+
+}
+
+
+/* ======================================
+   OBSERVACIONES
+====================================== */
+
+.observaciones {
+
+    margin-top: 28px;
+
+}
+
+
+.observaciones textarea {
+
+    width: 160px;
+
+    height: 72px;
+
+    resize: none;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: #e3e3e3;
+
+    padding: 10px;
+
+    outline: none;
+
+    font-family: Arial, sans-serif;
+
+}
+
+
+.observaciones textarea:focus {
+
+    outline: 2px solid #285876;
+
+}
+
+
+/* ======================================
+   BOTONES
+====================================== */
+
+.botones-salida {
+
+    display: flex;
+
+    gap: 30px;
+
+    margin-top: 35px;
+
+    margin-left: 5px;
+
+}
+
+
+/* ======================================
+   BOTÓN HECHO
+====================================== */
+
+.btn-hecho {
+
+    width: 153px;
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #8ee16f;
+
+    color: #000000;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+/* ======================================
+   BOTÓN LIMPIAR
+====================================== */
+
+.btn-limpiar {
+
+    width: 112px;
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #d7d7d7;
+
+    color: #000000;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+/* ======================================
+   EFECTOS DE LOS BOTONES
+====================================== */
+
+.btn-hecho:hover {
+
+    background-color: #79d45c;
+
+}
+
+
+.btn-limpiar:hover {
+
+    background-color: #c5c5c5;
+
+}
+
+
+/* ======================================
+   RESPONSIVE
+====================================== */
+
+@media (max-width: 900px) {
+
+    .tarjeta-salida {
+
+        width: 90%;
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .campos-principales {
+
+        flex-direction: column;
+
+    }
+
+    .campo input {
+
+        width: 100%;
+
+    }
+
+    .tarjeta-salida {
+
+        width: 90%;
+
+    }
+
+}
+
+/* =================================
+   SELECT PRODUCTO
+================================= */
+
+.campo select {
+
+    width: 168px;
+    height: 43px;
+
+    border: none;
+    border-radius: 7px;
+
+    background-color: #e3e3e3;
+
+    padding: 0 12px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    font-family: Arial, sans-serif;
+
+    color: #222;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+}
+
+
+/* EFECTO AL SELECCIONAR */
+
+.campo select:focus {
+
+    outline: 2px solid #285876;
+
+}

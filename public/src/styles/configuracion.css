@@ -1,0 +1,150 @@
+/* ======================================
+   CONTENIDO
+====================================== */
+
+.contenido-configuracion {
+
+    flex: 1;
+
+    padding: 5px 35px;
+
+}
+
+
+/* ======================================
+   TÍTULO
+====================================== */
+
+.contenido-configuracion h1 {
+
+    text-align: center;
+
+    font-size: 52px;
+
+    margin: 5px 0 10px;
+
+    color: #000000;
+
+}
+
+
+/* ======================================
+   PANEL
+====================================== */
+
+.panel-configuracion {
+
+    width: 500px;
+
+    height: 500px;
+
+    margin: 0 auto;
+
+    background-color: #ffffff;
+
+    border-radius: 16px;
+
+    box-shadow: 8px 12px 15px rgba(0, 0, 0, 0.25);
+
+    padding: 52px 32px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 38px;
+
+}
+
+
+/* ======================================
+   OPCIONES
+====================================== */
+
+.opcion-configuracion {
+
+    width: 310px;
+
+    height: 48px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #000000;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    color: #000000;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+/* ======================================
+   EFECTO HOVER
+====================================== */
+
+.opcion-configuracion:hover {
+
+    background-color: #1f435b;
+
+    color: #ffffff;
+
+    transform: scale(1.02);
+
+}
+
+
+/* ======================================
+   EFECTO AL PRESIONAR
+====================================== */
+
+.opcion-configuracion:active {
+
+    transform: scale(0.98);
+
+}
+
+
+/* ======================================
+   RESPONSIVE
+====================================== */
+
+@media (max-width: 700px) {
+
+    .contenido-configuracion {
+
+        padding: 20px;
+
+    }
+
+
+    .contenido-configuracion h1 {
+
+        font-size: 38px;
+
+    }
+
+
+    .panel-configuracion {
+
+        width: 90%;
+
+    }
+
+
+    .opcion-configuracion {
+
+        width: 90%;
+
+    }
+
+}

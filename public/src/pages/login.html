@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>InvenTrack - Iniciar Sesión</title>
+
+    <link rel="stylesheet" href="../styles/login.css">
+
+</head>
+
+
+<body>
+
+    <!-- =================================
+         CONTENEDOR DEL LOGIN
+    ================================== -->
+
+    <main class="contenedor-login">
+
+
+        <!-- =================================
+             TARJETA
+        ================================== -->
+
+        <section class="tarjeta-login">
+
+
+            <!-- TÍTULO -->
+
+            <h1>BIENVENIDO!</h1>
+
+
+            <!-- =================================
+                 FORMULARIO
+            ================================== -->
+
+            <form id="formLogin">
+
+
+                <!-- CORREO -->
+
+                <div class="campo-login">
+
+                    <label for="correo">
+                        Ingrese correo electronico
+                    </label>
+
+                    <input
+                        type="email"
+                        id="correo"
+                        placeholder="correo electronico"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- CONTRASEÑA -->
+
+                <div class="campo-login">
+
+                    <label for="contrasena">
+                        Ingrese la contraseña
+                    </label>
+
+                    <input
+                        type="password"
+                        id="contrasena"
+                        placeholder="Contraseña"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- RECUPERAR CONTRASEÑA -->
+
+                <a href="#" class="olvido">
+                    Olvide mi contraseña
+                </a>
+
+
+                <!-- REGISTRO -->
+
+                <div class="registro">
+
+                    <span>¿Aun no estas registrado?</span>
+
+                    <a href="../pages/registrarse.html">
+                        Registrate
+                    </a>
+
+                </div>
+
+
+                <!-- BOTÓN -->
+
+                <button
+                    type="submit"
+                    class="btn-login"
+                >
+                    Iniciar Sesión
+                </button>
+
+
+            </form>
+
+
+        </section>
+
+
+    </main>
+
+
+    <script src="../js/login.js"></script>
+
+</body>
+
+</html>

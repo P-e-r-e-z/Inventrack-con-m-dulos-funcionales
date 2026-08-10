@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>InvenTrack - Registro</title>
+
+    <link rel="stylesheet" href="../styles/registro.css">
+
+</head>
+
+
+<body>
+
+    <!-- =================================
+         CONTENEDOR DEL REGISTRO
+    ================================== -->
+
+    <main class="contenedor-registro">
+
+
+        <!-- =================================
+             TARJETA
+        ================================== -->
+
+        <section class="tarjeta-registro">
+
+
+            <!-- TÍTULO -->
+
+            <h1>REGISTRO</h1>
+
+
+            <!-- DESCRIPCIÓN -->
+
+            <p class="descripcion">
+                Empieza a gestionar tu inventario
+            </p>
+
+
+            <!-- =================================
+                 FORMULARIO
+            ================================== -->
+
+            <form id="formRegistro">
+
+
+                <!-- CORREO -->
+
+                <div class="campo-registro">
+
+                    <label for="correo">
+                        Registra un correo electronico
+                    </label>
+
+                    <input
+                        type="email"
+                        id="correo"
+                        placeholder="correo electronico"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- CONTRASEÑA -->
+
+                <div class="campo-registro">
+
+                    <label for="contrasena">
+                        Crea la contraseña
+                    </label>
+
+                    <input
+                        type="password"
+                        id="contrasena"
+                        placeholder="Contraseña"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- CONFIRMAR CONTRASEÑA -->
+
+                <div class="campo-registro">
+
+                    <label for="confirmarContrasena">
+                        Confirma la contraseña
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmarContrasena"
+                        placeholder="Contraseña"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- INICIAR SESIÓN -->
+
+                <div class="iniciar-sesion">
+
+                    <span>¿Ya estas registrado?</span>
+
+                    <a href="login.html">
+                        Inicia Sesión
+                    </a>
+
+                </div>
+
+
+                <!-- BOTÓN -->
+
+                <button
+                    type="submit"
+                    class="btn-registrar"
+                >
+                    Registrar
+                </button>
+
+
+            </form>
+
+
+        </section>
+
+
+    </main>
+
+
+    <script src="../js/registro.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>InvenTrack - Productos</title>
+
+    <link rel="stylesheet" href="../styles/productos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <!-- BARRA LATERAL -->
+        <aside class="sidebar">
+
+            <div class="perfil">
+
+                <div class="foto-perfil">
+                    <img src="../assents/img/usuario.jpg" alt="Foto de usuario">
+                </div>
+
+                <h3>User1234</h3>
+
+            </div>
+
+            <nav class="menu">
+
+                <a href="../pages/productos.html" class="activo">
+                    PRODUCTOS
+                </a>
+
+                <a href="../pages/salidas.html">
+                    SALIDAS
+                </a>
+
+                <a href="">
+                    REPORTES
+                </a>
+
+                <a href="../pages/configuracion.html">
+                    CONFIGURACIÓN
+                </a>
+
+            </nav>
+
+            <a href="#" class="cerrar-sesion" id="btnCerrarSesion">
+                CERRAR SESIÓN
+            </a>
+
+        </aside>
+
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="contenido">
+
+            <h1>PRODUCTOS</h1>
+
+            <!-- BUSCADOR -->
+            <div class="barra-herramientas">
+
+                <div class="notificacion">
+                    ♧
+                </div>
+
+                <div class="buscador">
+
+                    <span class="icono-busqueda">⌕</span>
+
+                    <input
+                        type="text"
+                        id="buscar"
+                        placeholder=""
+                    >
+
+                 </div>
+                 <div class="contenedor-filtro">
+
+                    <button class="btn-filtro" id="btnFiltro" aria-label="Filtros">
+                     <i class="fa-solid fa-bars"></i>
+                    </button>
+
+                    <div class="menu-filtro" id="menuFiltro">
+
+                    <!-- Las categorías aparecerán aquí automáticamente -->
+
+                    </div>
+
+                </div>
+
+                
+
+            </div>
+
+
+            <!-- ZONA DE PRODUCTOS -->
+            <section class="zona-productos">
+
+                <div class="productos" id="productos">
+
+                    <!-- PRODUCTO 1 -->
+                    <div class="producto">
+
+                        <img
+                            src=""
+                            alt="Pollo"
+                        >
+
+                        <div class="informacion-producto">
+
+                            <p>Pollo</p>
+
+                            <p>cant: 16</p>
+
+                            <p>categoría: carne</p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PRODUCTO 2 -->
+                    <div class="producto">
+
+                        <img
+                            src=""
+                            alt="Arroz"
+                        >
+
+                        <div class="informacion-producto">
+
+                            <p>Arroz</p>
+
+                            <p>cant: 16</p>
+
+                            <p>categoría: grano</p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PRODUCTO 3 -->
+                    <div class="producto">
+
+                        <img
+                            src=""
+                            alt="Lechuga"
+                        >
+
+                        <div class="informacion-producto">
+
+                            <p>Lechuga</p>
+
+                            <p>cant: 16</p>
+
+                            <p>categoría: legumbre</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FORMULARIO NUEVO PRODUCTO -->
+                <div class="nuevo-producto">
+
+                    <h2>NUEVO PRODUCTO</h2>
+
+                    <form id="formProducto">
+
+                        <input
+                            type="text"
+                            id="nombre"
+                            placeholder="Nombre"
+                            required
+                        >
+
+                        <input
+                            type="text"
+                            id="categoria"
+                            placeholder="Categoría"
+                            required
+                        >
+
+                        <input
+                            type="number"
+                            id="precio"
+                            placeholder="Precio"
+                            required
+                        >
+
+                        <input
+                            type="number"
+                            id="cantidad"
+                            placeholder="Cantidad"
+                            required
+                        >
+
+                        <button type="submit">
+                            Agregar
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="../js/productos.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,286 @@
+/* ======================================
+   CONTENIDO
+====================================== */
+
+.contenido-modificar {
+
+    flex: 1;
+
+    padding: 5px 35px;
+
+}
+
+
+/* ======================================
+   TÍTULO PRINCIPAL
+====================================== */
+
+.contenido-modificar h1 {
+
+    text-align: center;
+
+    font-size: 52px;
+
+    margin: 5px 0 10px;
+
+    color: #000000;
+
+}
+
+
+/* ======================================
+   TARJETA
+====================================== */
+
+.tarjeta-modificar {
+
+    width: 765px;
+
+    height: 452px;
+
+    margin: 0 auto;
+
+    background-color: #ffffff;
+
+    border-radius: 16px;
+
+    padding: 35px 17px;
+
+    box-shadow: 8px 12px 15px rgba(0, 0, 0, 0.25);
+
+}
+
+
+/* ======================================
+   TÍTULO DE LA TARJETA
+====================================== */
+
+.tarjeta-modificar h2 {
+
+    margin: 0 0 22px 0;
+
+    font-size: 21px;
+
+    color: #000000;
+
+}
+
+
+/* ======================================
+   PRODUCTO
+====================================== */
+
+.producto-seleccion {
+
+    display: flex;
+
+    flex-direction: column;
+
+    width: 168px;
+
+}
+
+
+.producto-seleccion label {
+
+    color: #486a82;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+
+}
+
+
+.producto-seleccion input {
+
+    width: 168px;
+
+    height: 43px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: #e3e3e3;
+
+    outline: none;
+
+    padding: 0 10px;
+
+}
+
+
+/* ======================================
+   MODIFICACIONES
+====================================== */
+
+.tarjeta-modificar h3 {
+
+    margin: 28px 0 35px 0;
+
+    font-size: 21px;
+
+    color: #000000;
+
+}
+
+
+/* ======================================
+   CAMPOS
+====================================== */
+
+.campos-modificacion {
+
+    display: flex;
+
+    gap: 20px;
+
+}
+
+
+.campo {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.campo label {
+
+    color: #486a82;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-left: 17px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.campo input {
+
+    width: 168px;
+
+    height: 43px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: #e3e3e3;
+
+    outline: none;
+
+    padding: 0 10px;
+
+}
+
+
+.campo input:focus,
+.producto-seleccion input:focus {
+
+    outline: 2px solid #285876;
+
+}
+
+
+/* ======================================
+   BOTÓN MODIFICAR
+====================================== */
+
+.btn-modificar {
+
+    width: 153px;
+
+    height: 40px;
+
+    margin-top: 56px;
+
+    margin-left: 5px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #8ee16f;
+
+    color: #000000;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.btn-modificar:hover {
+
+    background-color: #79d45c;
+
+}
+
+
+.btn-modificar:active {
+
+    transform: scale(0.98);
+
+}
+
+
+/* ======================================
+   RESPONSIVE
+====================================== */
+
+@media (max-width: 950px) {
+
+    .tarjeta-modificar {
+
+        width: 90%;
+
+    }
+
+
+    .campos-modificacion {
+
+        flex-wrap: wrap;
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .contenido-modificar h1 {
+
+        font-size: 38px;
+
+    }
+
+
+    .tarjeta-modificar {
+
+        height: auto;
+
+        padding-bottom: 40px;
+
+    }
+
+
+    .campos-modificacion {
+
+        flex-direction: column;
+
+    }
+
+}

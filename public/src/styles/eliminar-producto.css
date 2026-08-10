@@ -1,0 +1,263 @@
+/* ======================================
+   CONTENIDO
+====================================== */
+
+.contenido-eliminar {
+
+    flex: 1;
+
+    padding: 5px 35px;
+
+}
+
+
+/* ======================================
+   TÍTULO PRINCIPAL
+====================================== */
+
+.contenido-eliminar h1 {
+
+    text-align: center;
+
+    font-size: 52px;
+
+    margin: 5px 0 10px;
+
+    color: #000000;
+
+}
+
+
+/* ======================================
+   TARJETA
+====================================== */
+
+.tarjeta-eliminar {
+
+    width: 765px;
+
+    height: 452px;
+
+    margin: 0 auto;
+
+    background-color: #ffffff;
+
+    border-radius: 16px;
+
+    padding: 35px 23px;
+
+    box-shadow: 8px 12px 15px rgba(0, 0, 0, 0.25);
+
+}
+
+
+/* ======================================
+   TÍTULO
+====================================== */
+
+.tarjeta-eliminar h2 {
+
+    margin: 0;
+
+    font-size: 21px;
+
+    color: #000000;
+
+}
+
+
+/* ======================================
+   ADVERTENCIA
+====================================== */
+
+.advertencia {
+
+    display: flex;
+
+    align-items: center;
+
+    margin-top: 30px;
+
+    margin-left: 25px;
+
+    gap: 12px;
+
+}
+
+
+.advertencia span {
+
+    color: #aaaaaa;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+}
+
+
+/* ======================================
+   ICONO DE ADVERTENCIA
+====================================== */
+
+.icono-advertencia {
+
+    width: 29px;
+
+    height: 29px;
+
+    border: 2px solid #aaaaaa;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #999999;
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+}
+
+
+/* ======================================
+   PRODUCTO
+====================================== */
+
+.producto-eliminar {
+
+    display: flex;
+
+    flex-direction: column;
+
+    width: 168px;
+
+    margin-top: 38px;
+
+}
+
+
+.producto-eliminar label {
+
+    color: #486a82;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+
+}
+
+
+.producto-eliminar input {
+
+    width: 168px;
+
+    height: 43px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: #e3e3e3;
+
+    outline: none;
+
+    padding: 0 10px;
+
+}
+
+
+.producto-eliminar input:focus {
+
+    outline: 2px solid #285876;
+
+}
+
+
+/* ======================================
+   BOTÓN ELIMINAR
+====================================== */
+
+.btn-eliminar {
+
+    width: 153px;
+
+    height: 40px;
+
+    margin-top: 91px;
+
+    margin-left: 13px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #8ee16f;
+
+    color: #000000;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.btn-eliminar:hover {
+
+    background-color: #79d45c;
+
+}
+
+
+.btn-eliminar:active {
+
+    transform: scale(0.98);
+
+}
+
+
+/* ======================================
+   RESPONSIVE
+====================================== */
+
+@media (max-width: 950px) {
+
+    .tarjeta-eliminar {
+
+        width: 90%;
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .contenido-eliminar h1 {
+
+        font-size: 38px;
+
+    }
+
+
+    .tarjeta-eliminar {
+
+        width: 90%;
+
+        height: auto;
+
+        min-height: 450px;
+
+    }
+
+}
