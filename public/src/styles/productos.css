@@ -396,3 +396,142 @@ body {
 #formProducto button:hover {
     background-color: #ffffff;
 }
+/* ======================================
+   CAMPANA DE NOTIFICACIONES
+====================================== */
+
+.notificacion {
+
+    position: relative;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    font-size: 22px;
+
+    color: #486a82;
+
+}
+
+.notificacion:hover {
+
+    color: #285876;
+
+}
+
+
+/* ======================================
+   CONTADOR DE ALERTAS
+====================================== */
+
+.contador-alertas {
+
+    position: absolute;
+
+    top: 1px;
+    right: 1px;
+
+    min-width: 17px;
+    height: 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #e53935;
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 10px;
+    font-weight: bold;
+
+    padding: 2px;
+
+    box-sizing: border-box;
+
+}
+
+
+/* ======================================
+   PANEL DE NOTIFICACIONES
+====================================== */
+
+.panel-notificaciones {
+
+    display: none;
+
+    position: absolute;
+
+    top: 55px;
+    right: 0;
+
+    width: 320px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+
+    z-index: 1000;
+
+}
+
+
+/* Cuando está abierto */
+
+.panel-notificaciones.mostrar {
+
+    display: block;
+
+}
+
+
+/* ======================================
+   ENCABEZADO
+====================================== */
+
+.encabezado-notificaciones {
+
+    padding: 15px 18px;
+
+    border-bottom: 1px solid #ddd;
+
+}
+
+.encabezado-notificaciones h3 {
+
+    margin: 0;
+
+    font-size: 17px;
+
+    color: #486a82;
+
+}
+
+
+/* ======================================
+   SIN ALERTAS
+====================================== */
+
+.sin-alertas {
+
+    margin: 0;
+
+    padding: 25px;
+
+    text-align: center;
+
+    color: #777;
+
+    font-size: 14px;
+
+}

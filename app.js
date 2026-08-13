@@ -6,6 +6,7 @@ const usuariosRoutes = require('./src/routes/usuarios.routes');
 const verificarSesion = require('./src/middleware/auth');
 const productosRoutes = require('./src/routes/productos.routes');
 const salidasRoutes = require("./src/routes/salidas.routes");
+const alertasRoutes = require("./src/routes/alertas.routes");
 
 const app = express();
 const PORT = 3000;
@@ -47,6 +48,12 @@ app.use('/api/productos', productosRoutes);
 //RUTA DE SALIDAS
 //=====================================
 app.use("/api/salidas", salidasRoutes);
+
+// =====================================
+// RUTA DE ALERTAS
+// =====================================
+
+app.use("/api/alertas", alertasRoutes);
 
 // =====================================
 // PROTEGER LOS MÓDULOS

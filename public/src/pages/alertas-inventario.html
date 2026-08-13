@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>InvenTrack - Alertas de Inventario</title>
+
+    <link rel="stylesheet" href="../styles/estilo.css">
+    <link rel="stylesheet" href="../styles/alertas-inventario.css">
+
+</head>
+
+
+<body>
+
+    <div class="contenedor">
+
+
+        <!-- =================================
+             BARRA LATERAL
+        ================================== -->
+
+        <aside class="sidebar">
+
+            <div class="perfil">
+
+                <div class="foto-perfil">
+
+                    <img
+                        src="https://via.placeholder.com/120"
+                        alt="Foto de usuario"
+                    >
+
+                </div>
+
+                <h3>User1234</h3>
+
+            </div>
+
+
+            <nav class="menu">
+
+                <a href="../pages/productos.html">
+                    PRODUCTOS
+                </a>
+
+                <a href="../pages/salidas.html">
+                    SALIDAS
+                </a>
+
+                <a href="#">
+                    REPORTES
+                </a>
+
+                <a href="../pages/configuracion.html" class="activo">
+                    CONFIGURACION
+                </a>
+
+            </nav>
+
+
+            <a href="#" class="cerrar-sesion" id="btnCerrarSesion">
+                CERRAR SESIÓN
+            </a>
+
+        </aside>
+
+
+
+        <!-- =================================
+             CONTENIDO PRINCIPAL
+        ================================== -->
+
+        <main class="contenido-alertas">
+
+
+            <h1>CONFIGURACIÓN</h1>
+
+
+            <!-- =================================
+                 TARJETA DE ALERTAS
+            ================================== -->
+
+            <section class="tarjeta-alertas">
+
+
+                <h2>Sistema de alertas de inventario</h2>
+
+
+                <!-- PRODUCTO -->
+
+                <div class="seleccion-producto">
+
+                    <label for="productoAlerta">
+                        Selecciona el producto
+                    </label>
+
+                    <select id="productoAlerta" required>
+
+                        <option value="">
+                            Seleccionar producto
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- STOCK Y CADUCIDAD -->
+
+                <div class="campos-alerta">
+
+
+                    <div class="campo-alerta">
+
+                        <label for="stockMinimo">
+                            Stock minimo
+                        </label>
+
+                        <input
+                            type="number"
+                            id="stockMinimo"
+                            min="0"
+                        >
+
+                    </div>
+
+
+                    <div class="campo-alerta caducidad">
+
+                        <label for="fechaVencimiento">
+                            Alerta por caducidad cercana
+                        </label>
+
+                        <input
+                            type="date"
+                            id="fechaVencimiento"
+                            placeholder="Ingresa la fecha de vencimiento"
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- SEPARADOR -->
+
+                <hr>
+
+
+                <!-- FRECUENCIA -->
+
+                <div class="frecuencia">
+
+                     <label for="frecuenciaRecordatorio">
+                         Frecuencia de recordatorio:
+                    </label>
+
+                    <select id="frecuenciaRecordatorio">
+
+                        <option value="">
+                        Seleccionar frecuencia
+                        </option>
+
+                        <option value="30">
+                        Cada 30 minutos
+                        </option>
+
+                        <option value="60">
+                         Cada hora
+                        </option>
+
+                        <option value="360">
+                         Cada 6 horas
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- BOTÓN -->
+
+                <button
+                    type="button"
+                    class="btn-guardar-alerta"
+                    id="btnGuardarAlerta"
+                >
+                    Guardar alerta
+                </button>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+    <script src="../js/alertas-inventario.js"></script>
+
+</body>
+
+</html>

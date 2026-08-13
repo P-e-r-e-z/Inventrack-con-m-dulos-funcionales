@@ -13,14 +13,20 @@ router.get('/', async (req, res) => {
     try {
 
         const [productos] = await conexion.query(
-            'SELECT * FROM productos ORDER BY id DESC'
+            `SELECT * 
+             FROM productos
+             WHERE activo = 1
+             ORDER BY id DESC`
         );
 
         res.status(200).json(productos);
 
     } catch (error) {
 
-        console.error('Error al obtener productos:', error);
+        console.error(
+            'Error al obtener productos:',
+            error
+        );
 
         res.status(500).json({
             mensaje: 'Error al obtener los productos'
@@ -232,11 +238,10 @@ router.delete('/:id', async (req, res) => {
         // ELIMINAR PRODUCTO
         // ==================================
 
-        await conexion.query(
-            'DELETE FROM productos WHERE id = ?',
-            [id]
+       await conexion.query(
+        'UPDATE productos SET activo = 0 WHERE id = ?',
+         [id]
         );
-
 
         // ==================================
         // RESPUESTA

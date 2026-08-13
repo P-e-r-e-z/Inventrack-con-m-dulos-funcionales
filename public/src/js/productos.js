@@ -334,4 +334,207 @@ if (btnCerrarSesion) {
 
     });
 
+    // ======================================
+// NOTIFICACIONES
+// ======================================
+
+const btnNotificaciones =
+    document.getElementById("btnNotificaciones");
+
+const panelNotificaciones =
+    document.getElementById("panelNotificaciones");
+
+
+// ======================================
+// ABRIR / CERRAR NOTIFICACIONES
+// ======================================
+
+btnNotificaciones.addEventListener("click", function(event) {
+
+    event.stopPropagation();
+
+    panelNotificaciones.classList.toggle("mostrar");
+
+});
+
+
+// ======================================
+// CERRAR AL HACER CLIC AFUERA
+// ======================================
+
+document.addEventListener("click", function(event) {
+
+    if (
+        !panelNotificaciones.contains(event.target) &&
+        !btnNotificaciones.contains(event.target)
+    ) {
+
+        panelNotificaciones.classList.remove("mostrar");
+
+    }
+
+});
+
+// ======================================
+// CARGAR ALERTAS
+// ======================================
+
+async function cargarAlertas() {
+
+    try {
+
+        const respuesta = await fetch("/api/alertas");
+
+        if (!respuesta.ok) {
+
+            throw new Error("No se pudieron obtener las alertas");
+
+        }
+
+        const alertas = await respuesta.json();
+
+        console.log("Alertas recibidas:", alertas);
+
+        mostrarAlertas(alertas);
+
+    } catch (error) {
+
+        console.error(
+            "Error al cargar alertas:",
+            error
+        );
+
+    }
+
+}
+
+// ======================================
+// MOSTRAR ALERTAS
+// ======================================
+
+function mostrarAlertas(alertas) {
+
+    const contadorAlertas =
+        document.getElementById("contadorAlertas");
+
+    const listaAlertas =
+        document.getElementById("listaAlertas");
+
+
+    // ==================================
+    // ACTUALIZAR CONTADOR
+    // ==================================
+
+    contadorAlertas.textContent = alertas.length;
+
+
+    // ==================================
+    // SI NO HAY ALERTAS
+    // ==================================
+
+    if (alertas.length === 0) {
+
+        listaAlertas.innerHTML = `
+            <p class="sin-alertas">
+                No hay alertas.
+            </p>
+        `;
+
+        return;
+
+    }
+
+
+    // ==================================
+    // CREAR NOTIFICACIONES
+    // ==================================
+
+    listaAlertas.innerHTML = "";
+
+
+    alertas.forEach(function(alerta) {
+
+        const notificacion =
+            document.createElement("div");
+
+        notificacion.classList.add(
+            "item-alerta"
+        );
+
+
+        let mensaje = "";
+
+
+        // Stock bajo
+
+        if (
+            alerta.cantidad <=
+            alerta.stock_minimo
+        ) {
+
+            mensaje += `
+                <strong>⚠️ Stock bajo</strong>
+                <p>
+                    ${alerta.nombre}
+                    tiene ${alerta.cantidad}
+                    unidades.
+                </p>
+            `;
+
+        }
+
+
+        // Vencimiento cercano
+
+        if (alerta.fecha_vencimiento) {
+
+            const fechaVencimiento =
+                new Date(
+                    alerta.fecha_vencimiento
+                );
+
+            const hoy = new Date();
+
+            const diferencia =
+                fechaVencimiento - hoy;
+
+            const dias =
+                Math.ceil(
+                    diferencia /
+                    (1000 * 60 * 60 * 24)
+                );
+
+
+            if (dias <= 7) {
+
+                mensaje += `
+                    <strong>📅 Vencimiento cercano</strong>
+                    <p>
+                        ${alerta.nombre}
+                        vence en aproximadamente
+                        ${dias} días.
+                    </p>
+                `;
+
+            }
+
+        }
+
+
+        notificacion.innerHTML = mensaje;
+
+        listaAlertas.appendChild(
+            notificacion
+        );
+
+    });
+
+}
+
+// ======================================
+// CARGAR ALERTAS AL INICIAR
+// ======================================
+
+cargarAlertas();
+
 }

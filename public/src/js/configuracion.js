@@ -7,6 +7,10 @@ const eliminarProducto =
 const permisos =
     document.getElementById("permisos");
 
+const alertas =
+    document.getElementById("modificarAlertas");
+
+
 const ayuda =
     document.getElementById("ayuda");
 
@@ -42,6 +46,16 @@ if (eliminarProducto) {
     });
 
 }
+
+// ======================================
+// MODIFICAR ALERTAS
+// ======================================
+
+modificarAlertas.addEventListener("click", function() {
+
+    window.location.href = "alertas-inventario.html";
+
+});
 
 
 // ======================================

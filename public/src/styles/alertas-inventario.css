@@ -1,0 +1,405 @@
+/* ======================================
+   CONTENIDO
+====================================== */
+
+.contenido-alertas {
+
+    flex: 1;
+
+    padding: 5px 35px;
+
+}
+
+
+/* ======================================
+   TÍTULO PRINCIPAL
+====================================== */
+
+.contenido-alertas h1 {
+
+    text-align: center;
+
+    font-size: 52px;
+
+    margin: 5px 0 10px;
+
+    color: #000000;
+
+}
+
+
+/* ======================================
+   TARJETA
+====================================== */
+
+.tarjeta-alertas {
+
+    width: 765px;
+
+    height: 492px;
+
+    margin: 0 auto;
+
+    background-color: #ffffff;
+
+    border-radius: 16px;
+
+    padding: 30px 23px;
+
+    box-shadow: 8px 12px 15px rgba(0, 0, 0, 0.25);
+
+}
+
+
+/* ======================================
+   TÍTULO DE LA TARJETA
+====================================== */
+
+.tarjeta-alertas h2 {
+
+    margin: 0 0 20px 0;
+
+    font-size: 25px;
+
+    color: #000000;
+
+}
+
+
+/* ======================================
+   ETIQUETAS
+====================================== */
+
+.tarjeta-alertas label {
+
+    color: #486a82;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+}
+
+
+/* ======================================
+   SELECCIÓN DEL PRODUCTO
+====================================== */
+
+.seleccion-producto {
+
+    display: flex;
+
+    flex-direction: column;
+
+    width: 168px;
+
+}
+
+
+.seleccion-producto label {
+
+    margin-left: 10px;
+
+    margin-bottom: 7px;
+
+}
+
+
+.seleccion-producto input {
+
+    width: 168px;
+
+    height: 43px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: #e3e3e3;
+
+    outline: none;
+
+    padding: 0 10px;
+
+}
+
+
+/* ======================================
+   STOCK Y CADUCIDAD
+====================================== */
+
+.campos-alerta {
+
+    display: flex;
+
+    gap: 48px;
+
+    margin-top: 20px;
+
+}
+
+
+.campo-alerta {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.campo-alerta label {
+
+    margin-left: 15px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.campo-alerta input {
+
+    width: 168px;
+
+    height: 43px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: #e3e3e3;
+
+    outline: none;
+
+    padding: 0 10px;
+
+}
+
+
+/* CAMPO DE CADUCIDAD */
+
+.caducidad input {
+
+    width: 240px;
+
+}
+
+
+/* ======================================
+   EFECTO FOCUS
+====================================== */
+
+.seleccion-producto input:focus,
+.campo-alerta input:focus,
+.frecuencia select:focus {
+
+    outline: 2px solid #285876;
+
+}
+
+
+/* ======================================
+   SEPARADOR
+====================================== */
+
+.tarjeta-alertas hr {
+
+    border: none;
+
+    border-top: 2px solid #d2d2d2;
+
+    margin: 20px 3px 27px;
+
+}
+
+
+/* ======================================
+   FRECUENCIA
+====================================== */
+
+.frecuencia {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.frecuencia label {
+
+    margin-left: 7px;
+
+}
+
+
+.frecuencia select {
+
+    width: 196px;
+
+    height: 36px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: #e3e3e3;
+
+    outline: none;
+
+    padding: 0 10px;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    color: #222;
+
+    cursor: pointer;
+
+}
+
+
+/* ======================================
+   BOTÓN
+====================================== */
+
+.btn-guardar-alerta {
+
+    width: 153px;
+
+    height: 40px;
+
+    margin-top: 100px;
+
+    margin-left: 6px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #8ee16f;
+
+    color: #000000;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.btn-guardar-alerta:hover {
+
+    background-color: #79d45c;
+
+}
+
+
+.btn-guardar-alerta:active {
+
+    transform: scale(0.98);
+
+}
+
+
+/* ======================================
+   RESPONSIVE
+====================================== */
+
+@media (max-width: 950px) {
+
+    .tarjeta-alertas {
+
+        width: 90%;
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .contenido-alertas h1 {
+
+        font-size: 38px;
+
+    }
+
+
+    .tarjeta-alertas {
+
+        width: 90%;
+
+        height: auto;
+
+        min-height: 500px;
+
+    }
+
+
+    .campos-alerta {
+
+        flex-direction: column;
+
+        gap: 20px;
+
+    }
+
+
+    .frecuencia {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+}
+/* ======================================
+   SELECT PRODUCTO
+====================================== */
+
+.seleccion-producto select {
+
+    width: 168px;
+
+    height: 43px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: #e3e3e3;
+
+    outline: none;
+
+    padding: 0 10px;
+
+    font-size: 14px;
+
+    color: #222;
+
+    cursor: pointer;
+
+}
+
+
+.seleccion-producto select:focus {
+
+    outline: 2px solid #285876;
+
+}
+
+
+.seleccion-producto select option {
+
+    background-color: #ffffff;
+
+    color: #222;
+
+}
