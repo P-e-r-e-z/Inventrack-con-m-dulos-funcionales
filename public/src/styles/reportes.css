@@ -1,0 +1,474 @@
+.resultado-reporte {
+    display: none;
+}
+/* ======================================
+   CONTENIDO
+====================================== */
+
+.contenido-reportes {
+
+    flex: 1;
+
+    padding: 5px 35px;
+
+}
+
+
+/* ======================================
+   TÍTULO
+====================================== */
+
+.contenido-reportes h1 {
+
+    text-align: center;
+
+    font-size: 52px;
+
+    margin: 5px 0 10px;
+
+    color: #000000;
+
+}
+
+
+/* ======================================
+   TARJETA
+====================================== */
+
+.tarjeta-reportes {
+
+    width: 750px;
+
+    min-height: 390px;
+
+    margin: 0 auto;
+
+    background-color: #ffffff;
+
+    border-radius: 16px;
+
+    padding: 23px 15px;
+
+    box-shadow: 8px 12px 15px rgba(0, 0, 0, 0.25);
+
+}
+
+
+/* ======================================
+   TÍTULO DE LA TARJETA
+====================================== */
+
+.tarjeta-reportes h2 {
+
+    margin: 0 0 32px 0;
+
+    font-size: 20px;
+
+    color: #486a82;
+
+}
+
+
+/* ======================================
+   FILTROS
+====================================== */
+
+.filtros-reportes {
+
+    display: flex;
+
+    gap: 29px;
+
+    margin-left: 0;
+
+}
+
+
+.campo-reporte {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.campo-reporte label {
+
+    color: #486a82;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    margin-left: 31px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.campo-reporte input {
+
+    width: 148px;
+
+    height: 43px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: #e3e3e3;
+
+    outline: none;
+
+    padding: 0 10px;
+
+}
+
+
+.campo-reporte input:focus {
+
+    outline: 2px solid #285876;
+
+}
+
+
+/* ======================================
+   SELECT
+====================================== */
+
+.campo-reporte.tipo label {
+
+    margin-left: 2px;
+
+}
+
+
+.campo-reporte select {
+
+    width: 178px;
+
+    height: 43px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: #e3e3e3;
+
+    padding: 0 12px;
+
+    outline: none;
+
+    cursor: pointer;
+
+}
+
+
+.campo-reporte select:focus {
+
+    outline: 2px solid #285876;
+
+}
+
+
+/* ======================================
+   BOTONES
+====================================== */
+
+.botones-reporte {
+
+    display: flex;
+
+    gap: 27px;
+
+    margin-top: 38px;
+
+    margin-left: 8px;
+
+}
+
+
+.botones-reporte button {
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.btn-generar {
+
+    width: 153px;
+
+    background-color: #8ee16f;
+
+}
+
+
+.btn-exportar {
+
+    width: 111px;
+
+    background-color: #d9d9d9;
+
+}
+
+
+.btn-generar:hover {
+
+    background-color: #79d45c;
+
+}
+
+
+.btn-exportar:hover {
+
+    background-color: #c9c9c9;
+
+}
+
+
+.botones-reporte button:active {
+
+    transform: scale(0.98);
+
+}
+
+
+/* ======================================
+   RESULTADO
+====================================== */
+
+.resultado-reporte {
+
+    margin-top: 11px;
+
+    margin-left: 8px;
+
+}
+
+
+/*
+   Al cargar la página no mostramos
+   todavía el resultado.
+*/
+
+.resultado-reporte.oculto {
+
+    display: none;
+
+}
+
+
+/* ======================================
+   MENSAJE
+====================================== */
+
+.mensaje-reporte {
+
+    width: 282px;
+
+    height: 43px;
+
+    background-color: #c3dcff;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    padding: 0 12px;
+
+    box-sizing: border-box;
+
+}
+
+
+.icono-info {
+
+    width: 18px;
+
+    height: 18px;
+
+    border: 2px solid #000000;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+}
+
+
+.mensaje-reporte span:last-child {
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+}
+
+
+/* ======================================
+   TABLA
+====================================== */
+
+.contenedor-tabla {
+
+    margin-top: 11px;
+
+    overflow-x: auto;
+
+}
+
+
+.contenedor-tabla table {
+
+    border-collapse: collapse;
+
+    width: 628px;
+
+    table-layout: fixed;
+
+}
+
+
+.contenedor-tabla th,
+.contenedor-tabla td {
+
+    border: 1px solid #777777;
+
+    height: 40px;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    font-weight: normal;
+
+}
+
+
+.contenedor-tabla th {
+
+    background-color: #e3e3e3;
+
+}
+
+
+/* ANCHOS DE LAS COLUMNAS */
+
+.contenedor-tabla th:nth-child(1),
+.contenedor-tabla td:nth-child(1) {
+
+    width: 95px;
+
+}
+
+
+.contenedor-tabla th:nth-child(2),
+.contenedor-tabla td:nth-child(2) {
+
+    width: 68px;
+
+}
+
+
+.contenedor-tabla th:nth-child(3),
+.contenedor-tabla td:nth-child(3) {
+
+    width: 137px;
+
+}
+
+
+.contenedor-tabla th:nth-child(4),
+.contenedor-tabla td:nth-child(4) {
+
+    width: 85px;
+
+}
+
+
+.contenedor-tabla th:nth-child(5),
+.contenedor-tabla td:nth-child(5) {
+
+    width: 90px;
+
+}
+
+
+.contenedor-tabla th:nth-child(6),
+.contenedor-tabla td:nth-child(6) {
+
+    width: 153px;
+
+}
+
+
+/* ======================================
+   RESPONSIVE
+====================================== */
+
+@media (max-width: 950px) {
+
+    .tarjeta-reportes {
+
+        width: 90%;
+
+    }
+
+
+    .filtros-reportes {
+
+        flex-wrap: wrap;
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .contenido-reportes h1 {
+
+        font-size: 38px;
+
+    }
+
+
+    .tarjeta-reportes {
+
+        width: 90%;
+
+    }
+
+
+    .filtros-reportes {
+
+        flex-direction: column;
+
+    }
+
+}

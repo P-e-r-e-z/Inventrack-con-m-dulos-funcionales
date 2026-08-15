@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>InvenTrack - Reportes</title>
+
+    <link rel="stylesheet" href="../styles/estilo.css">
+    <link rel="stylesheet" href="../styles/reportes.css">
+
+</head>
+
+
+<body>
+
+    <div class="contenedor">
+
+
+        <!-- =================================
+             BARRA LATERAL
+        ================================== -->
+
+        <aside class="sidebar">
+
+            <div class="perfil">
+
+                <div class="foto-perfil">
+
+                    <img
+                        src="https://via.placeholder.com/120"
+                        alt="Foto de usuario"
+                    >
+
+                </div>
+
+                <h3>User1234</h3>
+
+            </div>
+
+
+            <nav class="menu">
+
+                <a href="../pages/productos.html">
+                    PRODUCTOS
+                </a>
+
+                <a href="../pages/salidas.html">
+                    SALIDAS
+                </a>
+
+                <a href="../pages/reportes.html" class="activo">
+                    REPORTES
+                </a>
+
+                <a href="../pages/configuracion.html">
+                    CONFIGURACION
+                </a>
+
+            </nav>
+
+
+            <a href="#" class="cerrar-sesion" id="btnCerrarSesion">
+                CERRAR SESION
+            </a>
+
+        </aside>
+
+
+
+        <!-- =================================
+             CONTENIDO
+        ================================== -->
+
+        <main class="contenido-reportes">
+
+
+            <h1>REPORTES Y ANÁLISIS</h1>
+
+
+            <section class="tarjeta-reportes">
+
+
+                <h2>HISTORIAL DE MOVIMIENTOS</h2>
+
+
+                <!-- =================================
+                     FILTROS
+                ================================== -->
+
+                <div class="filtros-reportes">
+
+
+                    <div class="campo-reporte">
+
+                        <label for="fechaDesde">
+                            fecha Desde*
+                        </label>
+
+                        <input
+                            type="date"
+                            id="fechaDesde"
+                        >
+
+                    </div>
+
+
+                    <div class="campo-reporte">
+
+                        <label for="fechaHasta">
+                            Fecha Hasta*
+                        </label>
+
+                        <input
+                            type="date"
+                            id="fechaHasta"
+                        >
+
+                    </div>
+
+
+                    <div class="campo-reporte tipo">
+
+                        <label for="tipoMovimiento">
+                            Filtrar por tipo*
+                        </label>
+
+                        <select id="tipoMovimiento">
+
+                            <option value="todos">
+                                Todos los movimientos
+                            </option>
+
+                            <option value="entrada">
+                                Entradas
+                            </option>
+
+                            <option value="salida">
+                                Salidas
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- =================================
+                     BOTONES
+                ================================== -->
+
+                <div class="botones-reporte">
+
+                    <button
+                        type="button"
+                        id="btnGenerar"
+                        class="btn-generar"
+                    >
+                        Generar Reporte
+                    </button>
+
+
+                    <button
+                        type="button"
+                        id="btnExportar"
+                        class="btn-exportar"
+                    >
+                        Exportar
+                    </button>
+
+                </div>
+
+
+                <!-- =================================
+                     RESULTADO
+                ================================== -->
+
+                <div
+                    id="resultadoReporte"
+                    class="resultado-reporte"
+                >
+
+                    <div class="mensaje-reporte">
+
+                        <span class="icono-info">i</span>
+
+                        <span id="textoResultado">
+                            Se encontraron 2 movimientos
+                        </span>
+
+                    </div>
+
+
+                    <!-- TABLA -->
+
+                    <div class="contenedor-tabla">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>Fecha</th>
+
+                                    <th>Id</th>
+
+                                    <th>Producto</th>
+
+                                    <th>Tipo</th>
+
+                                    <th>cantidad</th>
+
+                                    <th>Observaciones</th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="tablaMovimientos">
+
+                                <!--
+                                    Las filas se generarán
+                                    mediante JavaScript
+                                -->
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+    <script src="../js/reportes.js"></script>
+
+</body>
+
+</html>

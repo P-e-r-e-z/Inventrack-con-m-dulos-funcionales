@@ -83,6 +83,17 @@ router.post('/', async (req, res) => {
             ]
         );
 
+        await conexion.query(
+            `INSERT INTO entradas
+            (producto_id, cantidad, fecha, observaciones)
+            VALUES (?, ?, CURDATE(), ?)`,
+            [
+                resultado.insertId,
+                cantidad,
+                "Entrada inicial del producto"
+            ]
+        );  
+
 
         res.status(201).json({
             mensaje: 'Producto agregado correctamente',

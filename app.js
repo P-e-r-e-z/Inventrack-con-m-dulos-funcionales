@@ -7,6 +7,8 @@ const verificarSesion = require('./src/middleware/auth');
 const productosRoutes = require('./src/routes/productos.routes');
 const salidasRoutes = require("./src/routes/salidas.routes");
 const alertasRoutes = require("./src/routes/alertas.routes");
+const entradasRoutes = require("./src/routes/entradas.routes");
+const reportesRoutes = require("./src/routes/reportes.routes");
 
 const app = express();
 const PORT = 3000;
@@ -45,9 +47,16 @@ app.use('/api/usuarios', usuariosRoutes);
 app.use('/api/productos', productosRoutes);
 
 //=====================================
+//RUTA DE ENTRADAS
+//=====================================
+app.use("/api/entradas", entradasRoutes);
+
+//=====================================
 //RUTA DE SALIDAS
 //=====================================
 app.use("/api/salidas", salidasRoutes);
+
+app.use("/api/reportes", reportesRoutes);
 
 // =====================================
 // RUTA DE ALERTAS
