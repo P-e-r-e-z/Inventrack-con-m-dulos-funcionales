@@ -263,25 +263,76 @@ formulario.addEventListener("submit", async function(event) {
         // Si hubo un error
         if (!respuesta.ok) {
 
-            alert(datos.mensaje);
+        alert(datos.mensaje);
 
-            return;
+     return;
 
         }
 
 
-        // Producto guardado correctamente
+        // ======================================
+        // REGISTRAR LA ENTRADA
+        // ======================================
 
-        alert(datos.mensaje);
+        const respuestaEntrada = await fetch("/api/entradas", {
+
+        method: "POST",
+
+        headers: {
+        "Content-Type": "application/json"},
+     
+
+        body: JSON.stringify({
+
+        productoId: datos.id,
+        cantidad: cantidad,
+        fecha: new Date().toISOString().split("T")[0],
+        observaciones: "Producto agregado al inventario"
+
+    })
+
+});
 
 
-        // Limpiar formulario
-        formulario.reset();
+const datosEntrada = await respuestaEntrada.json();
 
 
-        // Volver a cargar los productos desde MySQL
-        cargarProductos();
+// ======================================
+// COMPROBAR ENTRADA
+// ======================================
 
+if (!respuestaEntrada.ok) {
+
+    console.error(
+        "El producto fue creado, pero no se pudo registrar la entrada:",
+        datosEntrada
+    );
+
+    alert(
+        "El producto fue agregado, pero no se pudo registrar su entrada."
+    );
+
+} else {
+
+    alert(
+        "Producto agregado y entrada registrada correctamente"
+    );
+
+}
+
+
+// ======================================
+// LIMPIAR FORMULARIO
+// ======================================
+
+formulario.reset();
+
+
+// ======================================
+// ACTUALIZAR PRODUCTOS
+// ======================================
+
+cargarProductos();
 
     } catch (error) {
 

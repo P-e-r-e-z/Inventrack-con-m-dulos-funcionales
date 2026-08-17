@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>InvenTrack - Asignación de permisos</title>
+
+    <link rel="stylesheet" href="../styles/asignacion-permisos.css">
+
+</head>
+
+
+<body>
+
+    <div class="contenedor">
+
+
+        <!-- =====================================
+             BARRA LATERAL
+        ====================================== -->
+
+        <!-- BARRA LATERAL -->
+        <aside class="sidebar">
+
+            <div class="perfil">
+
+                <div class="foto-perfil">
+                    <img src="../assents/img/usuario.jpg" alt="Foto de usuario">
+                </div>
+
+                <h3>User1234</h3>
+
+            </div>
+
+            <nav class="menu">
+
+                <a href="../pages/productos.html" class="activo">
+                    PRODUCTOS
+                </a>
+
+                <a href="../pages/salidas.html">
+                    SALIDAS
+                </a>
+
+                <a href="../pages/reportes.html">
+                    REPORTES
+                </a>
+
+                <a href="../pages/configuracion.html">
+                    CONFIGURACIÓN
+                </a>
+
+            </nav>
+
+            <a href="#" class="cerrar-sesion" id="btnCerrarSesion">
+                CERRAR SESIÓN
+            </a>
+
+        </aside>
+
+
+
+        <!-- =====================================
+             CONTENIDO PRINCIPAL
+        ====================================== -->
+
+        <main class="contenido">
+
+
+            <h1>CONFIGURACIÓN</h1>
+
+
+            <!-- =================================
+                 TARJETA DE ASIGNACIÓN
+            ================================== -->
+
+            <section class="tarjeta">
+
+
+                <h2>
+                    Asignación de permisos
+                </h2>
+
+
+                <!-- =================================
+                     SELECCIONAR USUARIO
+                ================================== -->
+
+                <div class="campo">
+
+                    <label for="usuario">
+                        Selecciona el usuario
+                    </label>
+
+                    <select id="usuario">
+
+                        <option value="">
+                            Seleccionar usuario
+                        </option>
+
+                        <option value="User1234">
+                            User1234
+                        </option>
+
+                        <option value="User5678">
+                            User5678
+                        </option>
+
+                        <option value="User9012">
+                            User9012
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- =================================
+                     SELECCIONAR ROL
+                ================================== -->
+
+                <div class="campo campo-rol">
+
+                    <label for="rol">
+                        Rol
+                    </label>
+
+                    <select id="rol">
+
+                        <option value="empleado">
+                            Empleado
+                        </option>
+
+                        <option value="encargado">
+                            Encargado
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- =================================
+                     LÍNEA DIVISORIA
+                ================================== -->
+
+                <hr>
+
+
+
+                <!-- =================================
+                     PERMISOS
+                ================================== -->
+
+                <div class="seccion-permisos">
+
+                    <h3>
+                        Permisos
+                    </h3>
+
+
+                    <table class="tabla-permisos">
+
+                        <tbody id="tablaPermisos">
+
+                            <!--
+                                Los permisos se generan
+                                mediante JavaScript
+                            -->
+
+                        </tbody>
+
+                    </table>
+
+
+                </div>
+
+
+
+                <!-- =================================
+                     BOTÓN
+                ================================== -->
+
+                <button
+                    type="button"
+                    id="btnGuardar"
+                    class="btn-guardar"
+                >
+                    Guardar cambios
+                </button>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+    <script src="../js/asignacion-permisos.js"></script>
+
+</body>
+
+</html>
